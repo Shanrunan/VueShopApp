@@ -11,8 +11,9 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "@tweenjs/tween.js": "^17.1.1",
     "vue": "^2.3.3",
-    "vue-awesome-swiper": "^2.5.4",
+    "vue-awesome-swiper": "2.5.4",
     "vue-router": "^2.3.1",
     "vue-slide": "^1.1.1"
   },
