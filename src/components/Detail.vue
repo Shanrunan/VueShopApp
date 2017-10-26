@@ -163,7 +163,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
+<style lang="scss" scoped rel="stylesheet/scss">
 h1, h2 {
   font-weight: normal;
 }
@@ -269,7 +269,7 @@ $headH: 3rem;
       font-size: 1rem;
     }
   }
-  
+
   .dt-i-directlybuy {
     position: absolute;
     right: 1.5rem;
@@ -277,7 +277,7 @@ $headH: 3rem;
     text-align: right;
     color: #FB5776;
 
-    &:after {
+    &:after {//&是父亲
       content: '';
       position: absolute;
       width: 1.4rem;

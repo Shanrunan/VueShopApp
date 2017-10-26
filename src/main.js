@@ -14,5 +14,6 @@ new Vue({
   components: { App },
   data: {
     eventHub: new Vue()
+    //?
   }
 })

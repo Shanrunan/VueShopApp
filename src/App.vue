@@ -3,8 +3,8 @@
     <transition name="shake-in">
       <div class="notification" v-show="notiShow">{{notiInfo}}</div>
     </transition>
-    <keep-alive exclude="'detail'">
-      <router-view :key="$route.path"></router-view>
+    <keep-alive exclude="'detail'">//?
+      <router-view :key="$route.path"></router-view>//?
     </keep-alive>
     <tabfooter></tabfooter>
   </div>
@@ -35,7 +35,7 @@ export default {
       }
     }
   },
-  mounted () {
+  mounted () {    //?
     this.$root.eventHub.$emit('pushToIndex')
     this.$root.eventHub.$on('showNotification', this.showNotification)
   }

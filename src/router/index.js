@@ -10,7 +10,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'index',
+      redirect: '/index',
       component: resolve => require(['@/components/Index.vue'], resolve),
       meta: {keepAlive: true}
     },
