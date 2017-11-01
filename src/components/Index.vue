@@ -22,11 +22,11 @@ export default {
       mainCpntId: 'l11',
       sbNeedRefresh: false,
       choosenTabs: [
-        {index: 0, name: '淘宝', default: false, component: 'taobao', cpntId: 'l21', msg: 'xx'},
-        {index: 1, name: '京东', default: false, component: 'jindong', cpntId: 'l22', msg: 'hh'}
+        {index: 1, name: '淘宝', default: false, component: 'taobao', cpntId: 'l21', msg: 'xx'},
+        {index: 2, name: '京东', default: false, component: 'jindong', cpntId: 'l22', msg: 'hh'}
       ],
       recommendTabs: [
-        {index: 0, name: '唯品会', default: false, component: 'weipinghui', cpntId: 'l23', msg: 'dd'}
+        {index: 3, name: '唯品会', default: false, component: 'weipinghui', cpntId: 'l23', msg: 'dd'}
       ]
     }
   },

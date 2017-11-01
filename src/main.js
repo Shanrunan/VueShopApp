@@ -13,7 +13,7 @@ new Vue({
   template: '<App/>',
   components: { App },
   data: {
+    /*事件代理*/
     eventHub: new Vue()
-    //?
   }
 })

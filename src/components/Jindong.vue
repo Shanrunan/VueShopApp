@@ -22,21 +22,20 @@ export default {
   data () {
     return {
       choosenTabs: [
-        {index: 0, name: '精选', default: true, component: 'listview', text: 'test1'},
-        {index: 1, name: '女装', default: false, component: 'listview', text: 'text2'},
-        {index: 2, name: '家居', default: false, component: 'listview', text: 'text3'},
-        {index: 3, name: '数码', default: false, component: 'listview', text: 'text4'},
-        {index: 4, name: '运动', default: false, component: 'listview', text: 'test3'}
+        {index: 21, name: '精选', default: true, component: 'listview', text: 'test1'},
+        {index: 22, name: '女装', default: false, component: 'listview', text: 'text2'},
+        {index: 23, name: '家居', default: false, component: 'listview', text: 'text3'},
+        {index: 24, name: '数码', default: false, component: 'listview', text: 'text4'},
+        {index: 25, name: '运动', default: false, component: 'listview', text: 'test3'}
       ],
       recommendTabs: [
-        {index: 0, name: '9块9', default: false, component: 'listview', text: 'test1'},
-        {index: 1, name: '绅士', default: false, component: 'listview', text: 'test2'}
+        {index: 26, name: '9块9', default: false, component: 'listview', text: 'test1'},
+        {index: 27, name: '绅士', default: false, component: 'listview', text: 'test2'}
       ]
     }
   },
   mounted:function(){
     this.$root.eventHub.$on('myclick',function(index){console.log(index)})
-
   }
 }
 </script>

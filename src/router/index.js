@@ -15,9 +15,13 @@ export default new Router({
       meta: {keepAlive: true}
     },
     {
+      /*path：路由路径*/
       path: '/index',
+      /*name：路由名称（路由跳转时用）*/
       name: 'index',
+      /*使用懒加载，导入对应组件*/
       component: resolve => require(['@/components/Index.vue'], resolve),
+      /*keepAlive：不重复加载。*/
       meta: {keepAlive: true}
     },
     {

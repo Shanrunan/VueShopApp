@@ -349,8 +349,7 @@
     watch: {
       'route': 'routeChange',
       'indicatorLeft': 'indicatorChange',
-      'curPage':function(index){
-
+      'curPage':function(){
         this.$root.eventHub.$emit('myclick',this.choosenTabs[this.curPage].index)
       }
     }

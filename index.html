@@ -2,14 +2,17 @@
 <html>
   <head>
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://forvera.me http://10.0.0.3:8081 data: gap: taobao: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src * data: blob: content:;">
+    <!--ios手机端点击时，禁止出现灰色区域的方法  -->
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <meta charset="utf-8">
-
+    <!--meta标签的format-detection属性是做一些格式检查用的,具体作用：禁止将页面中的一连串数字识别为电话号码、并设置为手机可以拨打的一个连接。
+这个标签的默认值是telephone=yes。-->
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="email=no">
     <meta name="format-detection" content="adress=no">
     <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <!--apple-mobile-web-app-capable是设置Web应用是否以全屏模式运行-->
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <title>vueproject</title>

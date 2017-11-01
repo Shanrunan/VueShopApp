@@ -22,15 +22,15 @@ export default {
   data () {
     return {
       choosenTabs: [
-        {index: 0, name: '男装', default: true, component: 'listview', text: '男装', msg: '男装'},
-        {index: 1, name: '女装', default: false, component: 'listview', text: 'text2', msg: '女装'},
-        {index: 2, name: '手机', default: false, component: 'listview', text: 'text3', msg: '手机'},
-        {index: 3, name: '球鞋', default: false, component: 'listview', text: 'text4', msg: '球鞋'},
-        {index: 5, name: '连衣裙', default: false, component: 'listview', text: 'test3', msg: '连衣裙'}
+        {index: 11, name: '男装', default: true, component: 'listview', text: '男装', msg: '男装'},
+        {index: 12, name: '女装', default: false, component: 'listview', text: 'text2', msg: '女装'},
+        {index: 13, name: '手机', default: false, component: 'listview', text: 'text3', msg: '手机'},
+        {index: 14, name: '球鞋', default: false, component: 'listview', text: 'text4', msg: '球鞋'},
+        {index: 15, name: '连衣裙', default: false, component: 'listview', text: 'test3', msg: '连衣裙'}
       ],
       recommendTabs: [
-        {index: 0, name: '风衣', default: false, component: 'listview', text: '风衣', msg: '风衣'},
-        {index: 1, name: '果干', default: false, component: 'listview', text: '果干', msg: '果干'}
+        {index: 16, name: '风衣', default: false, component: 'listview', text: '风衣', msg: '风衣'},
+        {index: 17, name: '果干', default: false, component: 'listview', text: '果干', msg: '果干'}
       ]
     }
   },

@@ -1,11 +1,18 @@
 <template>
   <div id="app">
+    <!--transition过渡-->
     <transition name="shake-in">
+      <!--提示框-->
       <div class="notification" v-show="notiShow">{{notiInfo}}</div>
     </transition>
+    <!--keep-alive缓存组件，不重复加载-->
+    <!--2.1.0后提供了include/exclude两个属性 可以针对性缓存相应的组件-->
     <keep-alive exclude="'detail'">//?
+      <!--路由的内容将被渲染在view中。-->
+      <!--$route.path路由路径-->
       <router-view :key="$route.path"></router-view>//?
     </keep-alive>
+      <!--底栏Tabfooter-->
     <tabfooter></tabfooter>
   </div>
 </template>
@@ -25,6 +32,7 @@ export default {
     }
   },
   methods: {
+      /*动画内容出现和消失*/
     showNotification: function (info, time = 3000) {
       if (!this.notiShow) {
         this.notiShow = true
@@ -36,7 +44,9 @@ export default {
     }
   },
   mounted () {    //?
+    /*放到index页面*/
     this.$root.eventHub.$emit('pushToIndex')
+    /*监听动画*/
     this.$root.eventHub.$on('showNotification', this.showNotification)
   }
 }
@@ -92,9 +102,9 @@ a, img, button, input, textarea, div, li {
   z-index: 999;
   border-radius: 0.5rem;
 }
-
+/*过渡动画*/
 .shake-in-enter-active {
-  animation: shake .6s;
+  animation: shake 10s;
 }
 
 @keyframes shake
