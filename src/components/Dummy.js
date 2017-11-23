@@ -11,7 +11,6 @@ Dummy.prototype = {
   ran: function (range, start = 0) {
     return Math.floor(Math.random() * range) + start
   }
-
 }
 
 export default Dummy

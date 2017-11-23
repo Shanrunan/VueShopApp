@@ -26,8 +26,12 @@ export default {
   methods: {
     linktoItem: function () {
       this.$root.eventHub.$emit('pushToDetail', this.ownprop)
+      this.$root.eventHub.$emit('toAppDate',this.ownprop.itemId)
     }
-  }
+  },
+
+
+
 }
 </script>
 
@@ -55,7 +59,7 @@ a {
   width: 100%;
   padding: 0.125rem 0;
   box-sizing: border-box;
-  
+
   .item-box {
     $imgh: 7rem;
     $imgp: 0.5rem;

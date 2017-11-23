@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     pushToDetail: function (pprop) {
-      this.$router.push({name: 'detail', query: { iprop: pprop }})
+      this.$router.push({name: 'detail'})
     },
     pushToSearch: function (recommend, recommendIndex) {
       this.$router.push({name: 'search', query: {recommend: recommend, recommendIndex: recommendIndex}})

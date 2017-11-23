@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import './components/linksdk.js'
 
 Vue.config.productionTip = false
 
@@ -16,4 +17,5 @@ new Vue({
     /*事件代理*/
     eventHub: new Vue()
   }
+
 })

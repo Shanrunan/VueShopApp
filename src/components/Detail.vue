@@ -20,7 +20,8 @@
       <div class="dt-coupon">
         <img class="dt-c-img" :src="couponBg">
         <div class="dt-c-info">
-          <div class="dt-c-discount">￥<span style="fontSize: 1.5rem">{{iprop.discount}}</span><br>满29减{{iprop.discount}}元</div><div class="dt-c-share">分享<br>优惠券</div><div class="dt-c-purchase">领券<br>购买</div>
+          <div class="dt-c-discount">￥<span style="fontSize: 1.5rem">{{iprop.discount}}</span><br>满29减{{iprop.discount}}元</div><div class="dt-c-share">分享<br>优惠券</div><div @click="openUrl" class="dt-c-purchase"  >领券<br>购买</div>
+          <a href="//m.taobao.com" data-type="bc_applink" data-appkey="23082328" data-itemid="44777395102" data-params='{"bc_test":"01"}'>去详情</a>
         </div>
         <div class="watermark">{{watermark}}</div>
       </div>
@@ -34,12 +35,14 @@
 
 <script>
 import Advice from './Advice'
+import BC_SDK from './initialize.js'
 
 export default {
   name: 'detail',
   data () {
     return {
-      iprop: this.$route.query.iprop,
+      iprop:this.$root.eventHub.$on('toDetailDate'),
+//      iprop: this.$route.query.iprop,
       couponBg: require('./assets/Coupon.png'),
       watermark: '专',
       imgLoaded: false,
@@ -50,6 +53,14 @@ export default {
     'advice': Advice
   },
   methods: {
+    openUrl: ()=>{
+      console.log(BC_SDK)
+      console.log(event)
+      window.BC_SDK.goDetail({
+        itemId : '521376186545',
+        params : {}
+      })
+      },
     mark: function () {
       this.marked = !this.marked
       if (this.marked) {
@@ -144,11 +155,10 @@ export default {
       }
     }
   },
-  watch: {
-    '$route': 'fetchdata'
-  },
+//
   mounted () {
     this.addBrowseHistory()
+
   },
   beforeRouteEnter (to, from, next) {
     next(vm => {
@@ -161,7 +171,6 @@ export default {
   }
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped rel="stylesheet/scss">
 h1, h2 {

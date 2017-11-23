@@ -30,17 +30,20 @@ export default {
       notiShow: false,
       notiInfo: ''
     }
-  },
-  methods: {
-      /*动画内容出现和消失*/
-    showNotification: function (info, time = 3000) {
-      if (!this.notiShow) {
-        this.notiShow = true
-        this.notiInfo = info
-        setTimeout(() => {
-          this.notiShow = false
-        }, time)
-      }
+      },
+      methods: {
+        /*动画内容出现和消失*/
+        showNotification: function (info, time = 3000) {
+          if (!this.notiShow) {
+            this.notiShow = true
+            this.notiInfo = info
+            setTimeout(() => {
+              this.notiShow = false
+         }, time)
+        }
+       },
+        toDetailDate:function(itemId){
+        this.$emit('toDetailDate',itemId)
     }
   },
   mounted () {    //?
@@ -48,6 +51,7 @@ export default {
     this.$root.eventHub.$emit('pushToIndex')
     /*监听动画*/
     this.$root.eventHub.$on('showNotification', this.showNotification)
+    this.$root.eventHub.$on('toAppDate',this.toDetailDate)
   }
 }
 </script>
